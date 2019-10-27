@@ -12,7 +12,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test --watch=false` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Running end-to-end tests
 
@@ -22,9 +22,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-## Docker Image Build and Container Run 
+## Docker Build Image
 
-Run ./startApp.sh to build and start the docker container.  App available at localhost:4200
+Run ./buildApp.sh to build the docker image.  Use -prod argument to build the production nginx image (uses Dockerfile-prod)
+
+## Docker Container Run 
+
+Run ./startApp.sh to start the docker container on port 4200. Use -prod argument to start the production nginx based container on port 80. 
 
 ## Stop Docker Container
 
